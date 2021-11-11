@@ -1,7 +1,7 @@
 {
-    "name": "mettle/sendportal-core",
-    "homepage": "https://github.com/mettle/sendportal-core",
-    "description": "Sendportal core functionality.",
+    "name": "processton/campaign-management-core",
+    "homepage": "https://github.com/processton/Campaign-Management-Core",
+    "description": "Extended From Sendportal core.",
     "type": "library",
     "license": "MIT",
     "authors": [],
