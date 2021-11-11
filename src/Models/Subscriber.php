@@ -52,6 +52,9 @@ class Subscriber extends BaseModel
         'email',
         'first_name',
         'last_name',
+        'phone_country_code',
+        'phone_area_code',
+        'phone_number',
         'meta',
         'unsubscribed_at',
         'unsubscribe_event_id'
