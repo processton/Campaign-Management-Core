@@ -8,6 +8,7 @@ use Sendportal\Base\View\Components\CheckboxField;
 use Sendportal\Base\View\Components\FieldWrapper;
 use Sendportal\Base\View\Components\FileField;
 use Sendportal\Base\View\Components\Label;
+use Sendportal\Base\View\Components\PhoneField;
 use Sendportal\Base\View\Components\SelectField;
 use Sendportal\Base\View\Components\SubmitButton;
 use Sendportal\Base\View\Components\TextareaField;
@@ -23,6 +24,7 @@ class FormServiceProvider extends ServiceProvider
     public function boot()
     {
         Blade::component(TextField::class, 'sendportal.text-field');
+        Blade::component(PhoneField::class, 'sendportal.phone-field');
         Blade::component(TextareaField::class, 'sendportal.textarea-field');
         Blade::component(FileField::class, 'sendportal.file-field');
         Blade::component(SelectField::class, 'sendportal.select-field');

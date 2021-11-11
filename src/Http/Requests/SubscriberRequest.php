@@ -31,6 +31,18 @@ class SubscriberRequest extends FormRequest
             'last_name' => [
                 'max:255',
             ],
+            'phone_country_code' => [
+                'min:2',
+                'max:5',
+            ],
+            'phone_area_code' => [
+                'max:6',
+                'min:2',
+            ],
+            'phone_number' => [
+                'max:15',
+                'min:7',
+            ],
             'tags' => [
                 'nullable',
                 'array',
