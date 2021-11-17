@@ -14,9 +14,9 @@ class AddContactNumberInSubscribersTable extends Migration
     public function up()
     {
         Schema::table('sendportal_subscribers', function (Blueprint $table) {
-            $table->integer('phone_country_code');
-            $table->integer('phone_area_code');
-            $table->string('phone_number',24);
+            $table->integer('phone_country_code')->nullable();
+            $table->integer('phone_area_code')->nullable();
+            $table->string('phone_number',24)->nullable();
         });
     }
 

@@ -48,6 +48,7 @@ class ApiRoutes
             });
 
             $this->get('v1/ping', '\Sendportal\Base\Http\Controllers\Api\PingController@index');
+            $this->post('v1/subscribers', '\Sendportal\Base\Http\Controllers\Api\SubscribersController@storeViaAPI');
         };
     }
 }

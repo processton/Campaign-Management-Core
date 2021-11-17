@@ -58,6 +58,19 @@ class SubscribersController extends Controller
     /**
      * @throws Exception
      */
+    public function storeViaAPI(SubscriberStoreRequest $request): SubscriberResource
+    {
+        $workspaceId = 1;
+        $subscriber = $this->apiService->storeOrUpdate($workspaceId, collect($request->validated()));
+
+        $subscriber->load('tags');
+
+        return new SubscriberResource($subscriber);
+    }
+
+    /**
+     * @throws Exception
+     */
     public function show(int $id): SubscriberResource
     {
         $workspaceId = Sendportal::currentWorkspaceId();
