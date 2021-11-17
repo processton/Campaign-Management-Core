@@ -71,6 +71,7 @@ class SubscribersController extends Controller
         $data = $request->all();
         $data['unsubscribed_at'] = $request->has('subscribed') ? null : now();
         $data['unsubscribe_event_id'] = $request->has('subscribed') ? null : UnsubscribeEventType::MANUAL_BY_ADMIN;
+        
         unset($data["phone_widget"]);
         
 
